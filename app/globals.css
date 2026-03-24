@@ -1,18 +1,16 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #111827; /* nice dark grey, easier on eyes than pure black */
+/* Force light mode ALWAYS */
+html {
+  color-scheme: light;
 }
 
-html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  min-height: 100%;
+  background-color: #ffffff !important;
+  color: #111827 !important;
 }
 
-/* Make sure common elements inherit properly */
-* {
-  color: inherit;
+/* Fix common elements */
+h1, h2, h3, h4, h5, h6, p, span, div {
+  color: #111827;
 }
