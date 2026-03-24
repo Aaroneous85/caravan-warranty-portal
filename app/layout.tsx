@@ -1,4 +1,5 @@
 import "./globals.css";
+import Navigation from "@/components/Navigation";
 
 export const metadata = {
   title: "Caravan Warranty Portal",
@@ -12,8 +13,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-gray-900 min-h-screen">
-        {children}
+      <body>
+        <div
+          style={{
+            minHeight: "100vh",
+            background: "#ffffff",
+            color: "#111827",
+          }}
+        >
+          <Navigation />
+
+          <main
+            style={{
+              maxWidth: "1100px",
+              margin: "0 auto",
+              padding: "24px",
+            }}
+          >
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
